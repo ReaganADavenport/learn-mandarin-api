@@ -10,7 +10,7 @@ class Card {
 
     static async getAllGreetings(){
         try{
-            const response = await db.any(`select * from greeting`);
+            const response = await db.any(`select * from greetings`);
             return response;
         } catch(err){
             return err.message;
