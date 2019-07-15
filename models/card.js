@@ -17,6 +17,24 @@ class Card {
         }
     };
 
+    static async getAllNationalities(){
+        try {
+            const response = await db.any(`select * from nationalities`);
+            return response;
+        } catch(err){
+            return err.message;
+        }
+    };
+
+    static async getAllFamily(){
+        try {
+            const response = await db.any(`select * from family`);
+            return response;
+        } catch(err){
+            return err.message;
+        }
+    };
+
 };
 
 module.exports = Card;
