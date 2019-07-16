@@ -35,6 +35,33 @@ class Card {
         }
     };
 
+    static async getAllNumbers(){
+        try {
+            const response = await db.any(`select * from numbers`);
+            return response;
+        } catch(err){
+            return err.message;
+        }
+    };
+
+    static async getAllDaysAndMonths(){
+        try {
+            const response = await db.any(`select * from days_and_months`);
+            return response;
+        } catch(err){
+            return err.message;
+        }
+    };
+
+    static async getAllDates(){
+        try {
+            const response = await db.any(`select * from dates`);
+            return response;
+        } catch(err){
+            return err.message;
+        }
+    };
+
 };
 
 module.exports = Card;
