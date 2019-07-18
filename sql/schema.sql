@@ -39,3 +39,10 @@ create table dates (
     pinyin varchar(200),
     english varchar(200)
 );
+
+create table hobbies (
+    id serial primary key,
+    character varchar(100),
+    pinyin varchar(200),
+    english varchar(200)
+);

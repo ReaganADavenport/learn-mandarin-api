@@ -38,4 +38,9 @@ router.get('/dates', async (req,res,next)=>{
     res.json(allDates).status(200);
 });
 
+router.get('/hobbies', async (req,res,next)=>{
+    const allHobbies = await CardModel.getAllHobbies();
+    res.json(allHobbies).status(200);
+});
+
 module.exports = router;

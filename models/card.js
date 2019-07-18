@@ -62,6 +62,15 @@ class Card {
         }
     };
 
+    static async getAllHobbies(){
+        try {
+            const response = await db.any(`select * from hobbies`);
+            return response;
+        } catch(err){
+            return err.message;
+        }
+    }
+
 };
 
 module.exports = Card;
