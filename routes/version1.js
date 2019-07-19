@@ -43,4 +43,19 @@ router.get('/hobbies', async (req,res,next)=>{
     res.json(allHobbies).status(200);
 });
 
+router.get('/visiting', async (req,res,next)=>{
+    const allVisiting = await CardModel.getAllVistiting();
+    res.json(allVisiting).status(200);
+});
+
+router.get('/appointments', async (req,res,next)=>{
+    const allAppointments = await CardModel.getAllAppointments();
+    res.json(allAppointments).status(200);
+});
+
+router.get('/studying', async (req,res,next)=>{
+    const allStudying = await CardModel.getAllStudying();
+    res.json(allStudying).status(200);
+});
+
 module.exports = router;

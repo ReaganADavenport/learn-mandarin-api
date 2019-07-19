@@ -46,3 +46,24 @@ create table hobbies (
     pinyin varchar(200),
     english varchar(200)
 );
+
+create table visiting (
+    id serial primary key,
+    character varchar(100),
+    pinyin varchar(200),
+    english varchar(200)
+);
+
+create table appointments (
+    id serial primary key,
+    character varchar(100),
+    pinyin varchar(200),
+    english varchar(200)
+);
+
+create table studying (
+    id serial primary key,
+    character varchar(100),
+    pinyin varchar(200),
+    english varchar(200)
+);

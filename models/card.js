@@ -71,6 +71,33 @@ class Card {
         }
     }
 
+    static async getAllVistiting(){
+        try {
+            const response = await db.any(`select * from visiting`);
+            return response;
+        } catch(err){
+            return err.message;
+        }
+    }
+
+    static async getAllAppointments(){
+        try {
+            const response = await db.any(`select * from appointments`);
+            return response;
+        } catch(err){
+            return err.message;
+        }
+    }
+
+    static async getAllStudying(){
+        try {
+            const response = await db.any(`select * from studying`);
+            return response;
+        } catch(err){
+            return err.message;
+        }
+    }
+
 };
 
 module.exports = Card;
